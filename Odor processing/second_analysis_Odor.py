@@ -11,6 +11,6 @@ S2=data_filtered[692:717, :]#frames in which the odor is present, second stimuli
 S3=data_filtered[908:933, :]#frames in which the odor is present, third stimuli
 
 N_sub=np.mean(N-((np.mean(N,axis=0))),axis=0)#Subtraction of the average of N values
-S1_sub=np.mean(S1-(np.mean(N,axis=0)),axis=0)#Subtraction of the average of N values
-S2_sub=np.mean(S2-(np.mean(N,axis=0)),axis=0)#Subtraction of the average of N values
-S3_sub=np.mean(S3-(np.mean(N,axis=0)),axis=0)#Subtraction of the average of N values
+S1_sub=np.mean(S1-(np.mean(N,axis=0)),axis=0)-N_sub#Subtraction of the average of N values
+S2_sub=np.mean(S2-(np.mean(N,axis=0)),axis=0)-N_sub#Subtraction of the average of N values
+S3_sub=np.mean(S3-(np.mean(N,axis=0)),axis=0)-N_sub#Subtraction of the average of N values
